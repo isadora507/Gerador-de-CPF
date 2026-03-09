@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de CPF Válido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Gerador de CPF Válido</h1>
+        
+        <div class="info-box">
+            <h3>📋 Critérios para validação do CPF:</h3>
+            <ul>
+                <li>O CPF tem 11 dígitos numéricos</li>
+                <li>Os 9 primeiros dígitos são a base</li>
+                <li>O 10º dígito (1º verificador) é calculado a partir dos 9 primeiros</li>
+                <li>O 11º dígito (2º verificador) é calculado a partir dos 10 primeiros</li>
+                <li>Não pode ter todos os dígitos iguais (ex: 111.111.111-11)</li>
+                <li>Utiliza pesos de 10 a 2 para o primeiro dígito verificador</li>
+                <li>Utiliza pesos de 11 a 2 para o segundo dígito verificador</li>
+                <li>O resultado dos cálculos deve ser congruente com os dígitos informados</li>
+            </ul>
+        </div>
+
+        <div class="cpf-display">
+            <div id="cpfGerado">000.000.000-00</div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="gerarCPF()" class="gerar">🎲 Gerar novo CPF</button>
+            <button onclick="copiarCPF()" class="copiar">📋 Copiar CPF</button>
+        </div>
+
+        <div class="validadores">
+            <h3>✅ Validadores de CPF</h3>
+            <div class="links">
+                <a href="https://www.4devs.com.br/validador_cpf" target="_blank" class="validador-link">4Devs</a>
+                <a href="https://www.geradordecpf.org/validador/" target="_blank" class="validador-link">Gerador de CPF</a>
+                <a href="https://www.calculadorafacil.com.br/validar-cpf" target="_blank" class="validador-link">Calculadora Fácil</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            ⚡ CPFs gerados são válidos e podem ser testados em sites validadores
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
